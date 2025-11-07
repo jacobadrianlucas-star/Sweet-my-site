@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Words for You 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #fff0f5);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+      color: #ff1493;
+    }
+    h1 {
+      font-size: 2.5em;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 1.2em;
+      color: #c71585;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey <span id="name">Beautiful 💞</span></h1>
+  <p>You make my heart smile every single day 🌷</p>
+  <button onclick="changeMessage()">Click Me 💌</button>
+
+  <script>
+    const messages = [
+      "You're the reason I smile so often 💖",
+      "Every time I see you, the world feels lighter 🌸",
+      "You’re my favorite notification 💕",
+      "Your smile is my favorite part of the day ☀️"
+    ];
+    function changeMessage() {
+      const p = document.querySelector('p');
+      p.textContent = messages[Math.floor(Math.random() * messages.length)];
+    }
+  </script>
+</body>
+</html>
